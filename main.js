@@ -1,3 +1,23 @@
+// Header - Mobile Swiper //
+document.addEventListener('DOMContentLoaded', function () {
+  new Swiper('.mobile-main .swiper', {
+    slidesPerView: 1,
+    loop: true,
+    speed: 1000,
+    longSwipesRatio: 0.3, // 드래그 비율
+    longWeipesMs: 300, // 긴 swipe 인식 시간
+    resistanceRatio: 0.7, // 슬라이드 밀림 방지
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false
+    },
+    pagination: {
+      el: '.mobile-main .swiper-pagination',
+      clickable: true
+    }
+  });
+});
+
 // About me - Swiper //
 document.addEventListener('DOMContentLoaded', function () {
   const swiper = new Swiper('.resume .swiper', {
