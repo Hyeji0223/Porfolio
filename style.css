@@ -543,7 +543,6 @@ header .column.logo h6:last-child {
   #about .container-fluid .row .menu h2 {
   font-size: 24px;
   color: #333;
-  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -557,6 +556,7 @@ header .column.logo h6:last-child {
     display: none;
   }
   #about .container-fluid .row .content {
+    width: 100%;
     border: 1px solid red;
   }
   #about .container-fluid .row .content .text {

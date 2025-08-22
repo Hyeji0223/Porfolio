@@ -36,6 +36,18 @@ document.addEventListener('DOMContentLoaded', function () {
       nextEl: '.resume .swiper-button-next',
       prevEl: '.resume .swiper-button-prev'
     },
+
+
+  breakpoints: {
+    1200: {
+    slidesPerView: 3
+  },
+    // 768px 이하일 때는 1개씩 보여줌
+    768: {
+      slidesPerView: 1
+    }
+  }
+
   });
 });
 
@@ -49,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function () {
     autoplay: {
       delay: 3000,
       disableOnInteraction: false, // 사용자 인터랙션 후에도 autoplay 유지
-    },
+    }
   });
 
   // 슬라이드 하단에 있는 버튼들 선택
