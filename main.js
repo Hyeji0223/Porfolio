@@ -21,7 +21,6 @@ document.addEventListener('DOMContentLoaded', function () {
 // About me - Swiper //
 document.addEventListener('DOMContentLoaded', function () {
   const swiper = new Swiper('.resume .swiper', {
-    slidesPerView: 3, // 한번에 보여줄 슬라이드 개수
     spaceBetween: 10, // 슬라이드 사이 여백
     centeredSlides: true,
     loop: true,
@@ -36,18 +35,14 @@ document.addEventListener('DOMContentLoaded', function () {
       nextEl: '.resume .swiper-button-next',
       prevEl: '.resume .swiper-button-prev'
     },
-
-
-  breakpoints: {
-    1200: {
-    slidesPerView: 3
-  },
-    // 768px 이하일 때는 1개씩 보여줌
-    768: {
-      slidesPerView: 1
+    breakpoints: {
+      1200: {
+      slidesPerView: 3
+      },
+      768: {
+        slidesPerView: 1
+      }
     }
-  }
-
   });
 });
 
