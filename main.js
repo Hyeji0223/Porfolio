@@ -57,16 +57,16 @@ document.addEventListener('DOMContentLoaded', function () {
       disableOnInteraction: false, // 사용자 인터랙션 후에도 autoplay 유지
     },
     breakpoints: {
-      768: {
-        spaceBetween: 100, // 768px 이상일 때
+      1023: {
+        spaceBetween: 100, // 1023px 이상일 때
       },
       0: {
-        spaceBetween: 0 // 0 ~ 767px일 때
+        spaceBetween: 0 // 0 ~ 1022px일 때
       }
     }
   });
 
-  // 슬라이드에 있는 버튼들 선택
+  // 슬라이드 옆에 있는 버튼들 선택
   const buttons = document.querySelectorAll('.slide-buttons button');
 
   // 각 버튼에 클릭 이벤트 등록
