@@ -582,6 +582,10 @@ header .column.logo h6:last-child {
     height: auto;
     margin-bottom: 50px;
   }
+  #about .container-fluid .row .content .resume .swiper .swiper-wrapper .swiper-slide .dot {
+    width: 10px;
+    height: 10px;
+  }
   #about .container-fluid .row .content .resume .swiper .swiper-wrapper .swiper-slide h3 {
   font-size: 24px;
   }
@@ -596,6 +600,7 @@ header .column.logo h6:last-child {
   /* Work - Mobile */
   #work .container-fluid {
     height: auto;
+    margin-bottom: 30px;
   }
   #work .container-fluid .upper-section .content-left {
     display: none;
