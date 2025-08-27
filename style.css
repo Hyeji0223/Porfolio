@@ -611,7 +611,7 @@ header .column.logo h6:last-child {
     align-items: center;
     justify-content: center;
     padding: 0;
-    margin: 30px auto;
+    margin: 40px auto;
   }
   #work .container-fluid .upper-section .content-right h2 {
     font-size: 26px;
@@ -637,7 +637,7 @@ header .column.logo h6:last-child {
   }
   #work .container-fluid .lower-section .content-right .swiper .swiper-wrapper .swiper-slide h3 {
     order: 2;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
   }
   #work .container-fluid .lower-section .content-right .swiper .swiper-wrapper .swiper-slide img {
     order: 1;
@@ -653,7 +653,7 @@ header .column.logo h6:last-child {
     width: 100%;
     height: auto;
     background-color: rgba(0, 0, 0, 0);
-    margin: 30px auto;
+    margin: 40px auto;
   }
   #contact .container-fluid .row .menu h2 {
     position: static !important;
@@ -705,7 +705,7 @@ header .column.logo h6:last-child {
     grid-row: 3;
     justify-self: center;
     position: relative;
-    transform: translateY(50px);
+    transform: translateY(60px);
   }
   #contact .container-fluid .row .right-section .contact-area .box .form .right {
     width: 100%;
