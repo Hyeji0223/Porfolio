@@ -683,17 +683,15 @@ header .column.logo h6:last-child {
   }
   #contact .container-fluid .row .right-section .contact-area .box .form {
     display: grid;
-    border: 2px solid purple;
   }
   #contact .container-fluid .row .right-section .contact-area .box .form .left {
     width: 100%;
     display: contents;
-    border: 3px solid red;
   }
   #contact .container-fluid .row .right-section .contact-area .box .form .left h3 {
     grid-row: 1;
     justify-self: center;
-    margin: 2cqmax auto;
+    margin: 40px auto;
   }
   #contact .container-fluid .row .right-section .contact-area .box .form .left h3 span {
     margin-left: 3px;
@@ -735,6 +733,7 @@ header .column.logo h6:last-child {
   #contact #contact-form button {
   width: 40%;
   height: 50px;
+  font-weight: 300;
   }
 }
 
