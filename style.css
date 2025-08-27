@@ -600,7 +600,6 @@ header .column.logo h6:last-child {
   /* Work - Mobile */
   #work .container-fluid {
     height: auto;
-    margin-bottom: 30px;
   }
   #work .container-fluid .upper-section .content-left {
     display: none;
@@ -638,6 +637,7 @@ header .column.logo h6:last-child {
   }
   #work .container-fluid .lower-section .content-right .swiper .swiper-wrapper .swiper-slide h3 {
     order: 2;
+    margin-bottom: 30px;
   }
   #work .container-fluid .lower-section .content-right .swiper .swiper-wrapper .swiper-slide img {
     order: 1;
