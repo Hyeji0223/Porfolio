@@ -621,6 +621,15 @@ header .column.logo h6:last-child {
     height: auto;
     margin-bottom: 50px;
   }
+  #about .container-fluid .row .content .skills .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #about .container-fluid .row .content .skills .container .skill {
+    width: 100%;
+  }
 
   /* Work - Mobile */
   #work .container-fluid {
