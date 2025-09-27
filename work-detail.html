@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Work Detail</title>
+</head>
+<body>
+  <div id="project-0" class="project">
+    <h1>Web Design Project</h1>
+    <p>반응형 웹디자인 프로젝트입니다.</p>
+    <img src="./images/web.jpg" alt="">
+  </div>
+
+  <div id="project-1" class="project">
+    <h1>App Design Project</h1>
+    <p>앱 UX/UI 디자인 프로젝트입니다.</p>
+    <img src="./images/app.jpg" alt="">
+  </div>
+
+  <div id="project-2" class="project">
+    <h1>Poster Design</h1>
+    <p>포스터 디자인 프로젝트입니다.</p>
+    <img src="./images/poster.jpg" alt="">
+  </div>
+
+  <div id="project-3" class="project">
+    <h1>Project 04</h1>
+    <p>프로젝트입니다.</p>
+    <img src="./images/app.jpg" alt="">
+  </div>
+
+  <div id="project-4" class="project">
+    <h1>Design 05</h1>
+    <p>디자인 프로젝트입니다.</p>
+    <img src="./images/poster.jpg" alt="">
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const params = new URLSearchParams(window.location.search);
+      const projectIndex = params.get("project");
+
+      const allProjects = document.querySelectorAll(".project");
+
+      allProjects.forEach((el) => {
+      el.style.display = "none"; // 일단 전부 숨김
+      });
+      
+      const target = document.getElementById(`project-${projectIndex}`);
+
+      if (target) {
+        target.style.display = "block"; // 해당 id만 보이기
+      } else {
+        // 잘못된 파라미터인 경우 메시지 표시
+        document.body.innerHTML = "<h1>프로젝트를 찾을 수 없습니다.</h1>";
+      }
+    });
+  </script>
+</body>
+</html>
