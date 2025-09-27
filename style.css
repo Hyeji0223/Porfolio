@@ -621,6 +621,9 @@ header .column.logo h6:last-child {
     height: auto;
     margin-bottom: 50px;
   }
+  #about .container-fluid .row .content .skills h3 {
+    margin: 30px 0;
+  }
   #about .container-fluid .row .content .skills .container {
     display: flex;
     flex-direction: column;
