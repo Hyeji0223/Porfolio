@@ -87,6 +87,15 @@ document.addEventListener('DOMContentLoaded', function () {
       btn.classList.toggle('active', idx === realIndex);
     });
   });
+
+  // 슬라이드 이미지 클릭 시 새창 열기
+  const slideImages = document.querySelectorAll('.content-right .swiper-slide img');
+
+  slideImages.forEach((img, index) => {
+    img.addEventListener('click', () => {
+      const newWin = window.open('', '_blank', 'width=800,hight=600');
+    })
+  });
 });
 
 // To-top button //
