@@ -638,6 +638,7 @@ header .column.logo h6:last-child {
   /* Work - Mobile */
   #work .container-fluid {
     height: auto;
+    border-top: 1px solid #ddd;
   }
   #work .container-fluid .upper-section .content-left {
     display: none;
