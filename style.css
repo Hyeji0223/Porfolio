@@ -649,6 +649,7 @@ header .column.logo h6:last-child {
     display: flex;
     align-items: center;
     justify-content: center;
+    border: none;
     padding: 0;
     margin: 40px auto;
   }
@@ -668,6 +669,7 @@ header .column.logo h6:last-child {
   }
   #work .container-fluid .lower-section .content-right {
     width: 100%;
+    border: none;
   }
   #work .container-fluid .lower-section .content-right .swiper .swiper-wrapper .swiper-slide {
     width: 100%;
