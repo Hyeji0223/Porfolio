@@ -675,6 +675,7 @@ header .column.logo h6:last-child {
   }
   #work .container-fluid .lower-section .content-right .swiper .swiper-wrapper .swiper-slide h3 {
     order: 2;
+    font-size: 22px;
     margin-bottom: 40px;
   }
   #work .container-fluid .lower-section .content-right .swiper .swiper-wrapper .swiper-slide img {
