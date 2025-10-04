@@ -1,11 +1,11 @@
-// Header - Mobile Swiper //
 document.addEventListener('DOMContentLoaded', function () {
+  // Header - Mobile Swiper //
   new Swiper('.mobile-main .swiper', {
     slidesPerView: 1,
     loop: true,
     speed: 1000,
     longSwipesRatio: 0.3, // 드래그 비율
-    longWeipesMs: 300, // 긴 swipe 인식 시간
+    longSwipesMs: 300, // 긴 swipe 인식 시간
     resistanceRatio: 0.7, // 슬라이드 밀림 방지
     autoplay: {
       delay: 3000,
@@ -16,11 +16,9 @@ document.addEventListener('DOMContentLoaded', function () {
       clickable: true
     }
   });
-});
 
-// About me - Swiper //
-document.addEventListener('DOMContentLoaded', function () {
-  const swiper = new Swiper('.resume .swiper', {
+  // About me - Swiper //
+  const aboutSwiper = new Swiper('.resume .swiper', {
     spaceBetween: 10, // 슬라이드 사이 여백
     centeredSlides: true,
     loop: true,
@@ -44,11 +42,30 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }
   });
-});
 
-// Work - Swiper //
-document.addEventListener('DOMContentLoaded', function () {
-  const swiper = new Swiper('.content-right .swiper', {
+  // About me - Skills
+  const skillBars = document.querySelectorAll('.bar');
+  let skillsAnimated = false;
+
+  function animateSkillBars() {
+    const skillsSection = document.querySelector('.skills');
+    const rect = skillsSection.getBoundingClientRect(); // 화면에서의 위치 정보
+    const windowHeight = window.innerHeight; // 현재 창의 높이
+
+    if (!skillsAnimated && rect.top < windowHeight - 100) {
+      skillBars.forEach((bar) => {
+        const fill = bar.querySelector('.fill');
+        const percent = bar.dataset.percent;
+        fill.style.width = percent + '%'; // 해당 퍼센트만큼 채우기
+      });
+      skillsAnimated = true; // 한 번만 실행
+    }
+  }
+
+  window.addEventListener('scroll', animateSkillBars);
+  
+  // Work - Swiper //
+  const workSwiper = new Swiper('.content-right .swiper', {
     slidesPerView: 'auto',
     centeredSlides: true,
     loop: true,
@@ -73,14 +90,14 @@ document.addEventListener('DOMContentLoaded', function () {
   buttons.forEach((button) => {
     button.addEventListener('click', () => {
       const index = Number(button.getAttribute('data-index')); // 버튼에 지정된 index 값 읽기
-      swiper.slideToLoop(index); // loop 모드일 때 슬라이드를 해당 index로 이동
-      swiper.autoplay.start(); // 클릭 시 autoplay가 멈췄다면 다시 시작
+      workSwiper.slideToLoop(index); // loop 모드일 때 슬라이드를 해당 index로 이동
+      workSwiper.autoplay.start(); // 클릭 시 autoplay가 멈췄다면 다시 시작
     });
   });
 
   // 슬라이드가 변경될 때마다 호출되는 이벤트
-  swiper.on('slideChange', () => {
-    const realIndex = swiper.realIndex; // 실제 슬라이드의 현재 인덱스 가져오기
+  workSwiper.on('slideChange', () => {
+    const realIndex = workSwiper.realIndex; // 실제 슬라이드의 현재 인덱스 가져오기
     buttons.forEach((btn, idx) => {
       // 현재 슬라이드 인덱스와 버튼 인덱스를 비교해서
       // 일치하는 버튼에만 active 클래스 추가하고 나머지는 제거
@@ -89,15 +106,12 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   // 슬라이드 이미지 클릭 시 새창 열기
-  swiper.on('click', (swiperInstance, event) => {
+  workSwiper.on('click', (swiperInstance, event) => {
     const currentIndex = swiperInstance.realIndex;
     window.open(`work-detail.html?project=${currentIndex}`, "_blank");
   });
-});
 
-// To-top button //
-document.addEventListener('DOMContentLoaded', function () {
-  
+  // To-top button //
   const toTopBtn = document.getElementById('to-top');
     
   // 스크롤 이벤트 리스너 등록
@@ -112,9 +126,10 @@ document.addEventListener('DOMContentLoaded', function () {
     
   // "to-top" 버튼 클릭 시 페이지 맨 위로 이동
   toTopBtn.addEventListener('click', function () {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
     });
   });
+});
+
