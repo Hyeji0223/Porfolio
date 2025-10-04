@@ -51,19 +51,27 @@ header {
 header .column {
   position: relative;
   flex: 1;
-  flex-direction: column;
   border: .5px solid #ddd;
 }
 header .column:hover:nth-child(2) {
-  background-color: #333;
+  background-image: url(./images/main_01.jpg);
+  background-size: auto 100%;
+  background-position: center;
+  background-repeat: no-repeat;
   border: none;
 }
 header .column:hover:nth-child(3) {
-  background-color: #333;
+  background-image: url(./images/main_02.jpg);
+  background-size: auto 100%;
+  background-position: center;
+  background-repeat: no-repeat;
   border: none;
 }
 header .column:hover:nth-child(4) {
-  background-color: #333;
+  background-image: url(./images/main_03.jpg);
+  background-size: auto 100%;
+  background-position: center;
+  background-repeat: no-repeat;
   border: none;
 }
 header .column:hover h2,
@@ -112,7 +120,10 @@ header .column.logo h6:last-child {
 }
 #about .container-fluid .row .menu {
   height: 100vh;
-  background-color: #333;
+  background-image: url(./images/main_01.jpg);
+  background-size: auto 100%;
+  background-position: center;
+  background-repeat: no-repeat;
   display: block;
   z-index: 10;
 }
@@ -218,8 +229,8 @@ header .column.logo h6:last-child {
   margin-bottom: 20px;
 }
 #about .container-fluid .row .content .skills .container .skill img {
-  width: 50px;
-  height: 50px;
+  width: 42px;
+  height: 42px;
 }
 #about .container-fluid .row .content .skills .container .skill .bar {
   position: relative;
@@ -331,7 +342,10 @@ header .column.logo h6:last-child {
 }
 #contact .container-fluid .row .menu {
   height: 100vh;
-  background-color: #333;
+  background-image: url(./images/main_03.jpg);
+  background-size: auto 100%;
+  background-position: center;
+  background-repeat: no-repeat;
   display: block;
   z-index: 10;
 }
@@ -348,7 +362,7 @@ header .column.logo h6:last-child {
   font-weight: 600;
 }
 #contact .container-fluid .row .right-section {
-  background-color: #888;
+  background-color: #ddd;
 }
 #contact .container-fluid .row .right-section .contact-area {
   height: 80%;
@@ -448,9 +462,9 @@ header .column.logo h6:last-child {
   justify-content: center;
 }
 #contact .container-fluid .row .right-section .text-area h2 {
+  color: #fff;
   font-size: 60px;
   letter-spacing: 2px;
-  color: rgba(221, 221, 221, .5);
 }
 
 #to-top {
