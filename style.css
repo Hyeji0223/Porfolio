@@ -707,6 +707,7 @@ header .column.logo h6:last-child {
     margin-bottom: 40px;
   }
   #work .container-fluid .lower-section .content-right .swiper .swiper-wrapper .swiper-slide img {
+    width: 100%;
     order: 1;
   }
 
