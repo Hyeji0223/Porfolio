@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function () {
   window.addEventListener('scroll', animateSkillBars);
   
   // Work - Swiper //
-  const workSwiper = new Swiper('.content-right .swiper', {
+  //const workSwiper = new Swiper('.content-right .swiper', {
     slidesPerView: 'auto',
     centeredSlides: true,
     loop: true,
