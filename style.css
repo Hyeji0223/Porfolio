@@ -658,10 +658,10 @@ header .column.logo h6:last-child {
     height: 10px;
   }
   #about .container-fluid .row .content .resume .swiper .swiper-wrapper .swiper-slide h3 {
-  font-size: 24px;
+  font-size: 22px;
   }
   #about .container-fluid .row .content .resume .swiper .swiper-wrapper .swiper-slide p {
-  font-size: 16px;
+  font-size: 14px;
   }
   #about .container-fluid .row .content .skills {
     height: auto;
@@ -675,12 +675,18 @@ header .column.logo h6:last-child {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 0;
+    padding: 0 30px;
   }
   #about .container-fluid .row .content .skills .container .skill {
     width: 100%;
   }
-
+  #about .container-fluid .row .content .skills .container .skill img {
+    width: 35px;
+    height: 35px;
+  }
+  #about .container-fluid .row .content .skills .container .skill .bar {
+    margin-right: 0;
+  }
   /* Work - Mobile */
   #work .container-fluid {
     height: auto;
