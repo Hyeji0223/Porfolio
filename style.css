@@ -554,6 +554,7 @@ header .column.logo h6:last-child {
   }
   .mobile-main .swiper .swiper-wrapper .swiper-slide.slide1 {
     background-image: url(./images/m_main_01.jpg);
+    background-size: cover;
   }
   .mobile-main .swiper .swiper-wrapper .swiper-slide.slide2 {
     background-image: url();
