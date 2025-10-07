@@ -530,12 +530,13 @@ header .column.logo h6:last-child {
     height: 100vh;
   }
   .mobile-main .logo {
-    width: 100%;
-    height: 10%;
+    display: none;
+    /* width: 100%;
+    height: 12%;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
+    text-align: center; */
   }
   .mobile-main .logo h1 {
     font-size: 30px;
@@ -547,7 +548,7 @@ header .column.logo h6:last-child {
   }
   .mobile-main .swiper {
     width: 100%;
-    height: 85%;
+    height: 100%;
   }
   .mobile-main .swiper .swiper-wrapper .swiper-slide {
     background-color: #333;
@@ -555,12 +556,20 @@ header .column.logo h6:last-child {
   .mobile-main .swiper .swiper-wrapper .swiper-slide.slide1 {
     background-image: url(./images/m_main_01.jpg);
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
   }
   .mobile-main .swiper .swiper-wrapper .swiper-slide.slide2 {
-    background-image: url();
+    background-image: url(./images/m_main_02.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
   }
   .mobile-main .swiper .swiper-wrapper .swiper-slide.slide3 {
-    background-image: url();
+    background-image: url(./images/m_main_03.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
   }
   .mobile-main .swiper .swiper-wrapper .swiper-slide a {
     display: block;
