@@ -509,17 +509,8 @@ header .column.logo h6:last-child {
   transform: translate(-50%, -50%);
 }
 
-.header-mobile-swiper {
-  display: none;
-}
-
 
 @media (max-width: 1023px) {
-
-  /* 기존 PC 요소 숨기기 */
-  #to-top {
-    display: none !important;
-  }
 
   header {
     display: none; /* 기존 header 숨기기 */

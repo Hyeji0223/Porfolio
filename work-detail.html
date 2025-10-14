@@ -4,37 +4,119 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Work Detail</title>
+
+  <style>
+    body {
+      height: 100vh;
+      background-color: #ddd;
+      margin: 0;
+    }
+    .project {
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .project .image-slider {
+      flex-shrink: 0;
+      width: 100%;
+      height: 100%;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .project .image-slider .slide {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: auto;
+      height: 100%;
+      object-fit: contain;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      pointer-events: none;
+    }
+    .project .image-slider .slide.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .project .image-slider img {
+      width: auto;
+      height: 100%;
+      object-fit: cover;
+    }
+    .project .slider-controls {
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      justify-content: space-between;
+      padding: 0 30px;
+      box-sizing: border-box;
+    }
+    .project .slider-controls button {
+      background-color: #ddd;
+      border: none;
+      color: white;
+      font-size: 40px;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 8px;
+    }
+  </style>
 </head>
 <body>
-  <div id="project-0" class="project">
+  <div id="project-0" class="project image-slider">
     <h1>Web Design Project</h1>
     <p>Project 01</p>
     <img src="./images/web.jpg" alt="">
   </div>
 
-  <div id="project-1" class="project">
+  <div id="project-1" class="project image-slider">
     <h1>App Design Project</h1>
     <p>Project 02</p>
     <img src="./images/app.jpg" alt="">
   </div>
 
   <div id="project-2" class="project">
-    <h1>Project 03</h1>
-    <p>포스터 디자인 프로젝트입니다.</p>
-    <img src="./images/poster.jpg" alt="">
+    <div class="image-slider">
+      <img class="slide" src="./images/product-page_01.jpg" alt="banner_01">
+      <img class="slide" src="./images/product-page_02.jpg" alt="banner_02">
+    </div>
+    <div class="slider-controls">
+      <button id="prevBtn" class="arrow-btn">&#10094;</button>
+      <button id="nextBtn" class="arrow-btn">&#10095;</button>
+    </div>
   </div>
 
   <div id="project-3" class="project">
-    <h1>Project 04</h1>
-    <p>디자인 프로젝트입니다.</p>
-    <img src="./images/app.jpg" alt="">
+    <div class="image-slider">
+      <img class="slide" src="./images/banner_01.jpg" alt="banner_01">
+      <img class="slide" src="./images/banner_02.jpg" alt="banner_02">
+    </div>
+    <div class="slider-controls">
+      <button id="prevBtn" class="arrow-btn">&#10094;</button>
+      <button id="nextBtn" class="arrow-btn">&#10095;</button>
+    </div>
   </div>
 
   <div id="project-4" class="project">
-    <h1>Design 05</h1>
-    <p>디자인 프로젝트입니다.</p>
-    <img src="./images/poster.jpg" alt="">
+    <div class="image-slider">
+      <img class="slide" src="./images/package_01.jpg" alt="package_01">
+      <img class="slide" src="./images/package_02.jpg" alt="package_02">
+    </div>
+    <div class="slider-controls">
+      <button id="prevBtn" class="arrow-btn">&#10094;</button>
+      <button id="nextBtn" class="arrow-btn">&#10095;</button>
+    </div>
   </div>
+
 
   <script>
     document.addEventListener("DOMContentLoaded", function () {
@@ -53,6 +135,34 @@
         target.style.display = "block"; // 해당 id만 보이기
       } else {
         document.body.innerHTML = "<h1>프로젝트를 찾을 수 없습니다.</h1>";
+      }
+
+      // 이미지 슬라이드 기능
+      const slider = target.querySelector(".image-slider");
+      const slides = slider?.querySelectorAll(".slide");
+
+      if (slider && slides.length > 1) {
+        const prevBtn = target.querySelector(".slider-controls #prevBtn");
+        const nextBtn = target.querySelector(".slider-controls #nextBtn");
+        let currentIndex = 0;
+
+        function showSlide(index) {
+          slides.forEach((slide, i) => {
+            slide.classList.toggle("active", i === index);
+          });
+        }
+
+        prevBtn?.addEventListener("click", () => {
+          currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+          showSlide(currentIndex);
+        });
+
+        nextBtn?.addEventListener("click", () => {
+          currentIndex = (currentIndex + 1) % slides.length;
+          showSlide(currentIndex);
+        });
+
+        showSlide(currentIndex); // 초기화
       }
     });
   </script>
