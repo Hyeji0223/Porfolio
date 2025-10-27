@@ -351,6 +351,7 @@ header .column.logo h6:last-child {
   width: 600px;
   height: 400px;
   border: 1px solid #ddd;
+  cursor: pointer;
 }
 
 /* Section - contact */
